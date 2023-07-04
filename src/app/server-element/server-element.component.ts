@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./server-element.component.css']
 })
 export class ServerElementComponent {
-
+  servidores = [{type:"server",name:"Teste",content:"Servidor para testes"},{type:"blueprint",name:"Teste2",content:"Servidor para testes2"}];
 }
