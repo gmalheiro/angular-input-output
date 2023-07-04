@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-server-element',
@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./server-element.component.css']
 })
 export class ServerElementComponent {
-  servidores = [{type:"server",name:"Teste",content:"Servidor para testes"},{type:"blueprint",name:"Teste2",content:"Servidor para testes2"}];
+
+  //vai vir de fora ou seja vai entrar aqui dentro 
+  // Dados vão vir de fora e serão INSERIDOS NESSE COMPONENT
+  // se o dado está vindo de fora ele vai entrar ou seja INPUT
+  @Input() element:{type:string,name:string,content:string};
+
+  // servidores = [{type:"server",name:"Teste",content:"Servidor para testes"},{type:"blueprint",name:"Teste2",content:"Servidor para testes2"}];
+
+  constructor() { }
+
+  ngOnInit(): void {  }
+
 }
